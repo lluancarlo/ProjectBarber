@@ -1,6 +1,7 @@
 Flask
 Flask-SQLAlchemy
 flask-marshmallow
+flask_migrate
 flask-script
 flask-cors
 Flask-Login
