@@ -28,7 +28,7 @@ def json_encoder_handler(obj):
 def json_dumps(value: dict):
     """Converte o json para string.
     """
-    return dumps(sanetize(value), default=json_encoder_handler)
+    return value
 
 
 class ModifyJSONEncoder(JSONEncoder):
