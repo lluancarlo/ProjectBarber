@@ -4,7 +4,7 @@ db = SQLAlchemy()
 
 def config_db(app):
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/barberdatabase' 
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:''@localhost/barberdatabase' 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     db.init_app(app)
