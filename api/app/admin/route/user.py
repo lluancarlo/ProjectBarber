@@ -47,6 +47,9 @@ def delete(id):
 @app.route('<id>', methods=["PUT"])
 def update(id):
     """Altera o usuário do banco"""
+    data = request.json
     if request.method == "PUT":
-        updated = USER.update(id=id, data=request.json)
+        updated = USER.update(id=id, data=data)
+    if not data:
+        return response_wrapper_error(code='409', message='Envie as informações necessarias', data=None), 409
     return response_wrapper_success(message='Usuario Alterado com sucesso!', data=user_schema.dump(updated)), 200

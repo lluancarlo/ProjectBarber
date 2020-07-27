@@ -45,8 +45,7 @@ class Users:
     def update(self, id, data):
         user = User.query.filter_by(id=id).first()
        
-        if not data:
-            return response_wrapper_error(code='409', message='Envie as informações necessarias', data=None), 409
+
 
         user.username = data.get('username')
         user.email = data.get('email')
