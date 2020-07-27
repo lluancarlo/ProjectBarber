@@ -6,9 +6,6 @@ ma = Marshmallow()
 
 def config_db(app):
 
-    # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:''@localhost/barberdatabase' 
-    # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
     db.init_app(app)
     ma.init_app(app)
 
