@@ -1,5 +1,0 @@
-{
-    "SQLALCHEMY_DATABASE_URI": "mysql+pymysql://root:''@localhost/barberdatabase",
-    "SQLALCHEMY_TRACK_MODIFICATIONS": "False",
-    "FLASK_ENV": "development"
-}
