@@ -17,8 +17,7 @@ user_schema = UserSchema()
 class Users:
     def get_by_id(self, id):
         user = User.query.filter_by(id=id).first()
-        return user    
-    
+        return user
 
     def create(self, data):
         if not data:
@@ -32,8 +31,7 @@ class Users:
         if user == None:
             return response_wrapper_error(code='409', message='Usuario não foi criado', data=data), 409
 
-        return user    
-
+        return user
 
     def delete(self, id):
         user = User.query.filter_by(id=id).first()
@@ -41,17 +39,12 @@ class Users:
         db.session.delete(user)
         db.session.commit()
 
-
     def update(self, id, data):
         user = User.query.filter_by(id=id).first()
-       
-
 
         user.username = data.get('username')
         user.email = data.get('email')
 
         db.session.commit()
 
-        return data    
-    
-
+        return data
