@@ -10,5 +10,5 @@ app/helpers - Deserializers para JSON, codigo re-aproveitado.
 
 app/models/ - Pasta aonde ficaram os models do backend.
 
-app/index.py/ - Rota index.
+app/index.py/ - Rota index
 

@@ -6,11 +6,11 @@ from flask.json import JSONEncoder, JSONDecoder
 
 from .datetime_helpers import stringutc_to_datetime
 
-remove_keys_json = ["secret", "_id"]
+remove_keys_json = ["secret", "id"]
 
 
 def json_decoder_handler(obj):
-    pass
+    return obj
 
 
 def json_encoder_handler(obj):
@@ -26,8 +26,6 @@ def json_encoder_handler(obj):
 
 
 def json_dumps(value: dict):
-    """Converte o json para string.
-    """
     return value
 
 
@@ -42,24 +40,6 @@ class ModifyJSONEncoder(JSONEncoder):
 class ModifyJSONDecoder(JSONDecoder):
     def decoder(self, d):
         return json_decoder_handler(d)
-
-
-def sanetize(values):
-    if (isinstance(values, dict)):
-        for key, value in values.items():
-            values[key] = sanetize(value)
-        if "_id" in values:
-            values["id"] = values["_id"]
-        for key in remove_keys_json:
-            if key in values:
-                del values[key]
-    elif (isinstance(values, list)):
-        for index, value in enumerate(values):
-            values[index] = sanetize(value)
-    elif (isinstance(values, ObjectId)):
-        objectIdAsStr = str(values)
-        values = objectIdAsStr
-    return values
 
 
 def sanetize_request(values):
