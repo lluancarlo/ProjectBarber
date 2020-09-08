@@ -17,6 +17,14 @@ Criar um ReadMe com uma doc das tecnologias usadas.
 
 # Back-end está na pasta de api
 
-Para instalar as dependencias basta ter instalado o pipenv e usar o ´pipenv install´
+Para instalar as dependencias basta ter instalado o pipenv e usar o 
 
-e logo em seguida para rodar o projeto ´python manage.py runserver´
+> `pipenv install`
+
+Entrar no shell do pipenv com:
+
+> `pipenv shell`
+
+e logo em seguida para rodar o projeto com o comando: 
+
+> `python manage.py runserver`
