@@ -13,3 +13,10 @@ Manter padrão de formatação de código e styleguides.
 
 
 Criar um ReadMe com uma doc das tecnologias usadas.
+
+
+# Back-end está na pasta de api
+
+Para instalar as dependencias basta ter instalado o pipenv e usar o ´pipenv install´
+
+e logo em seguida para rodar o projeto ´python manage.py runserver´
